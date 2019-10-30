@@ -1,12 +1,16 @@
 import * as actionTypes from "./actionTypes";
 
+
+// burasi tetiklenen eventlere gore statelerin dolduruldugu yer
+
 export function changeCategory(category) {
   return { type: actionTypes.CHANGE_CATEGORY, payload: category };
 }
 
 export function getCategoriesSuccess(categories) {
-return {type:actionTypes.GET_CATEGORIES_SUCCESS, payload:categories}
+  return {type:actionTypes.GET_CATEGORIES_SUCCESS, payload:categories}
 }
+
 
 export function getCategories() {
   return function(dispatch) {
