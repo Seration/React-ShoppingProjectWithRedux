@@ -5,6 +5,7 @@ import * as productActions from "../../redux/actions/productActions";
 import * as cartActions from "../../redux/actions/cartActions";
 import { Badge, Table,Button } from "reactstrap";
 import alertify from "alertifyjs";
+
 class ProductList extends Component {
 
   componentDidMount() {
