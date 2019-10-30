@@ -4,7 +4,7 @@ import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavIt
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../../redux/actions/cartActions";
-
+import {Link} from "react-router-dom"
 
 class CartSummary extends Component {
 
@@ -32,7 +32,7 @@ class CartSummary extends Component {
                     </DropdownItem>
                 ))}
             <DropdownItem divider />
-            <DropdownItem> Cart Details</DropdownItem>
+            <DropdownItem><Link to={"/cart"}>Cart Details></Link></DropdownItem>
             </DropdownMenu>
 
         </UncontrolledDropdown>
