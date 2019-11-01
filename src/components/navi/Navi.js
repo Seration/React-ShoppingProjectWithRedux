@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -9,8 +10,6 @@ import {
   NavLink
 } from "reactstrap";
 import CartSummary from "../cart/CartSummary";
-
-
 
 export default class Navi extends React.Component {
   constructor(props) {
@@ -26,22 +25,23 @@ export default class Navi extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-  
+
   render() {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Northwind App</NavbarBrand>
+          <NavbarBrand>
+            <Link to="/">Northwind App</Link>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <CartSummary></CartSummary>
+              <NavItem>
+                <NavLink>
+                  <Link to="/saveproduct">Add Product</Link>
+                </NavLink>
+              </NavItem>
+              <CartSummary></CartSummary>
             </Nav>
           </Collapse>
         </Navbar>
